@@ -1,0 +1,64 @@
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;600;700&family=Poppins:wght@100;300;400;500;600;700;800;900&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  color: white;
+}
+* a {
+  text-decoration: none;
+}
+
+:root {
+  --one-lightgrey: rgb(124,129,140);
+  --one-midlightgrey: rgb(75,81,98);
+  --one-midgrey: rgb(64,69,82);
+  --one-grey: rgb(56,60,74);
+  --one-darkgrey: rgb(40, 43, 51);
+  --one-blue: rgb(82,148,226);
+}
+
+body {
+  height: 100vh;
+  width: 60%;
+  margin: auto;
+  font-family: "Poppins";
+  background-color: var(--one-darkgrey);
+}
+body header {
+  background-color: var(--one-grey);
+  margin-top: 20px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+body header .nav {
+  display: flex;
+  justify-content: center;
+}
+body header .nav .nav-element {
+  margin-left: 15px;
+}
+body header .nav .nav-element a {
+  padding: 7px 10px;
+  border-radius: 3px;
+  transition: 0.5s;
+}
+body header .nav .nav-element a:hover {
+  background-color: var(--one-darkgrey);
+}
+body header .nav .nav-element:nth-child(5) a {
+  color: rgb(255, 255, 255);
+  background-color: rgb(184, 54, 54);
+  border-radius: 3px;
+  padding: 5px 8px;
+}
+body header .nav .nav-element:nth-child(5) a:hover {
+  background-color: rgb(139, 43, 43);
+}
+body header .nav li ul {
+  display: none;
+}
+
+/*# sourceMappingURL=sctyle.css.map */
