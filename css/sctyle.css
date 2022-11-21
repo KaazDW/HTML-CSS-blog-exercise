@@ -10,157 +10,165 @@
 }
 
 :root {
-  --one-lightgrey: rgb(124,129,140);
-  --one-midlightgrey: rgb(75,81,98);
-  --one-midgrey: rgb(64,69,82);
-  --one-grey: rgb(56,60,74);
-  --one-darkgrey: rgb(25, 28, 37);
   --one-blue: rgb(82,148,226);
+  --hover-color: rgb(36, 36, 36);
+  --border-color: rgb(30 41 59/.5);
+  --header-color: rgb(18 24 29/.6);
 }
 
 body {
-  width: 60%;
-  margin: auto;
+  background-color: #000;
   font-family: "Poppins";
-  background-color: var(--one-darkgrey);
+  width: 50vw;
+  margin: auto;
 }
 body header {
-  background-color: var(--one-grey);
-  max-width: 1100px;
-  margin-top: 20px;
+  background-color: var(--header-color);
+  border: 1px solid var(--border-color);
   border-radius: 5px;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  transition: 1s;
+  position: fixed;
+  backdrop-filter: blur(10px);
+  margin-top: 15px;
+  width: 50vw;
+}
+body header .title-div img {
+  height: 30px;
+  display: none;
 }
 body header .nav {
   display: flex;
-  justify-content: center;
 }
-body header .nav .nav-element {
-  margin-left: 15px;
-}
-body header .nav .nav-element a {
-  padding: 7px 10px;
-  border-radius: 3px;
+body header .nav li a {
+  margin: 0.1vw;
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: 1px solid rgba(30, 41, 59, 0);
   transition: 0.3s;
 }
-body header .nav .nav-element a:hover {
-  background-color: var(--one-darkgrey);
-}
-body header .nav .nav-element:nth-child(5) a {
-  color: rgb(255, 255, 255);
-  background-color: rgb(184, 54, 54);
-  border-radius: 3px;
-  padding: 5px 8px;
-}
-body header .nav .nav-element:nth-child(5) a:hover {
-  background-color: rgb(139, 43, 43);
+body header .nav li a:hover {
+  background-color: var(--hover-color);
+  border: 1px solid var(--border-color);
 }
 body header .nav li ul {
   display: none;
 }
-body header.sticky {
-  padding: 0px;
-}
 body main {
-  background-color: var(--one-grey);
-  margin-top: 15px;
-  border-radius: 5px;
+  padding-top: 125px;
+  width: 45vw;
+  margin: auto;
 }
-body .main-home {
-  height: 85vh;
+body .main-home section.main-section-first {
+  margin-bottom: 50px;
 }
-body .main-home h1.main-title {
+body .main-home section.main-section-first .container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 5px;
+  grid-auto-rows: minmax(100px, auto);
   text-align: center;
-  padding-top: 45px;
-  text-transform: uppercase;
-  letter-spacing: 5px;
-  -webkit-text-stroke: 1px white;
-  color: rgba(255, 255, 255, 0);
-  font-size: 45px;
+  margin-top: 25px;
 }
-body .main-home section.main-section-home {
-  padding-top: 60px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+body .main-home section.main-section-first .container h3 {
+  letter-spacing: 1px;
+  font-weight: 800;
 }
-body .main-home section.main-section-home img {
-  margin: 0px 35px;
-  border-radius: 50%;
+body .main-home section.main-section-first .container p {
+  color: rgb(155, 155, 155);
 }
-body .main-home section.main-section-home p {
-  max-width: 600px;
+body .main-home section.main-section-two {
+  text-align: center;
 }
-body .main-home section.main-section-next {
-  margin-top: 55px;
-  display: flex;
-  justify-content: space-around;
-}
-body .main-home section.main-section-next p {
-  max-width: 500px;
-  margin-top: 5px;
-  text-align: right;
-}
-body .main-home section.main-section-next img {
-  border-radius: 5px;
-  height: 9vw;
-  margin: 0px 15px;
-}
-body .main-home .main-lastimg {
+body .main-home section.main-section-two img {
+  width: 45vw;
   margin-top: 50px;
+  box-shadow: rgba(207, 207, 207, 0.171) 0px 0px 50px 5px;
+  border-radius: 5px;
+}
+body .main-home section.main-section-three {
+  text-align: center;
+  margin-top: 35px;
+}
+body .main-home section.main-section-three div {
   display: flex;
   justify-content: center;
+  margin-top: 15px;
 }
-body .main-home .main-lastimg img {
+body .main-home section.main-section-three div img {
+  margin: 30px 55px;
   border-radius: 5px;
-  width: 55vw;
+  box-shadow: rgba(207, 207, 207, 0.158) 0px 0px 50px 5px;
 }
 body footer {
-  border-radius: 5px;
-  margin-top: 15px;
+  border-top: 1px solid rgb(59, 59, 59);
   text-align: center;
-  padding-bottom: 35px;
-  margin-bottom: 55px;
-  background-color: var(--one-grey);
+  margin-top: 50px;
+  padding-top: 20px;
 }
 body footer h3 {
   text-transform: uppercase;
-  letter-spacing: 1px;
-  font-weight: 400;
-  padding-top: 15px;
+  color: rgb(189, 189, 189);
 }
-body footer div img {
-  border-radius: 50%;
-  margin: 15px;
-  height: 3vw;
+body footer p {
+  color: grey;
 }
 
-@media (max-width: 1250px) {
+@media (max-width: 1280px) {
   body {
-    background-color: var(--one-darkgrey);
-    font-family: "Poppins";
-    width: 90%;
-    margin: auto;
+    width: 100vw;
   }
   body header {
-    background-color: var(--one-grey);
-    border-radius: 5px;
     display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-top: 0px;
+    width: 100vw;
   }
-  body header h1 {
-    letter-spacing: 2px;
+  body header .title-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
-  body header .nav li ul {
+  body header .title-div h1 {
+    font-size: 35px;
+  }
+  body header .title-div img {
+    display: block;
+    margin: 15px;
+  }
+  body header .nav {
+    flex-direction: column;
     display: none;
   }
-  body section.main-section-next img {
-    height: 1500px;
+  body header .nav li {
+    margin: 10px;
   }
-  body body .main-home section.main-section-next img {
-    height: 2600px;
+  body main, body footer {
+    width: 90vw;
+    margin: auto;
+  }
+  body .main-home section.main-section-first .container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  body .main-home section.main-section-first .container .card {
+    width: 50vw;
+    margin: auto;
+    margin-top: 15px;
+  }
+  body .main-home section.main-section-two img {
+    width: 85vw;
+  }
+  body .main-home section.main-section-three div {
+    display: block;
+  }
+  body .main-home section.main-section-three div img {
+    width: 70%;
+  }
+  body footer {
+    margin-top: 50px;
+    padding-top: 20px;
   }
 }
 
