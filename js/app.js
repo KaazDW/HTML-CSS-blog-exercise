@@ -1,8 +1,4 @@
-// window.addEventListener("scroll", function(){
-//     var header = document.querySelector("header");
-//     // header.classList.toggle("sticky", window.scrollY > 10);
-// })
-
+console.log(">> JS FILE LOAD");
 var nav = document.getElementById("nav");
 act = false;
 
@@ -19,3 +15,17 @@ function mobilemenu() {
         console.log("menu : " + act);
     }
 }
+function ContactValidation() {
+
+    var validRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+    var input = document.getElementById="email";
+    var msg = document.getElementById="validatormsg";
+
+    if (input.value.match(validRegex)) {
+        msg.innerHTML = "Email Validé";
+    } else {
+        msg.innerHTML = "Email Erroné";
+    }
+  
+}
+ContactValidation();

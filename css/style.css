@@ -199,6 +199,108 @@ body .main-blog .blog-grid a:hover {
 body .main-blog .blog-grid img {
   border-radius: 5px;
 }
+body .main-contact form {
+  width: 15vw;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin: auto;
+  grid-gap: 10px;
+  padding-right: 150px;
+}
+body .main-contact form label {
+  text-align: right;
+  margin-right: 15px;
+}
+body .main-contact form input, body .main-contact form textarea, body .main-contact form select, body .main-contact form option, body .main-contact form optgroup {
+  padding: 5px 10px;
+  color: black;
+  width: 300px;
+  min-width: 300px;
+  max-width: 300px;
+  transition: 0.5s;
+}
+body .main-contact form text-area {
+  width: 150vw;
+}
+body .main-contact form button {
+  grid-column: 2/2;
+  width: 100px;
+  margin: 15px auto;
+  padding: 6px 12px;
+  background-color: var(--one-blue);
+  border: none;
+  border-radius: 5px;
+  transition: 0.5s;
+}
+body .main-contact form input:hover, body .main-contact form textarea:hover, body .main-contact form select:hover {
+  transform: translateY(3px);
+}
+body .main-contact form button:hover {
+  transform: translateY(5px);
+  background-color: rgba(82, 147, 226, 0.648);
+}
+body .main-pres section {
+  display: flex;
+  justify-content: center;
+  margin-top: 35px;
+}
+body .main-pres section a {
+  margin: 15px;
+  padding: 8px 12px;
+}
+body .main-pres .wave a:nth-child(1) {
+  background-color: var(--one-blue);
+  border-radius: 5px;
+  animation: firstAnim 3s infinite;
+}
+body .main-pres .wave a:nth-child(2) {
+  background-color: var(--one-blue);
+  border-radius: 5px;
+  animation: firstAnim 3s infinite;
+  animation-delay: 0.5s;
+}
+body .main-pres .wave a:nth-child(3) {
+  background-color: var(--one-blue);
+  border-radius: 5px;
+  animation: firstAnim 3s infinite;
+  animation-delay: 1s;
+}
+body .main-pres .wave a:nth-child(4) {
+  background-color: var(--one-blue);
+  border-radius: 5px;
+  animation: firstAnim 3s infinite;
+  animation-delay: 1.5s;
+}
+body .main-pres .other {
+  border-top: 3px dashed grey;
+  padding-top: 55px;
+}
+body .main-pres .other a:nth-child(1) {
+  background-color: lightcoral;
+  border-radius: 50px;
+  animation: secondAnim 3s infinite;
+}
+body .main-pres .other a:nth-child(2) {
+  background-color: lightgreen;
+  border-radius: 5px;
+  animation: thirdAnim 3s infinite;
+  animation-delay: 0.5s;
+  color: black;
+  font-weight: 600;
+}
+body .main-pres .other a:nth-child(3) {
+  background-color: var(--one-blue);
+  border-radius: 5px;
+  animation: fourthAnim 3s infinite;
+  border: 5px solid white;
+  animation-delay: 1s;
+}
+body .main-pres .other a:nth-child(4) {
+  background-color: var(--one-blue);
+  border-radius: 5px;
+  animation: fithAnim 3s infinite;
+  animation-delay: 1.5s;
+}
 body footer {
   border-top: 1px solid rgb(59, 59, 59);
   text-align: center;
@@ -217,6 +319,76 @@ body footer .copyright {
   color: rgb(214, 214, 214);
 }
 
+@keyframes firstAnim {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+@keyframes secondAnim {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes thirdAnim {
+  0% {
+    filter: blur(0px);
+    border-radius: 5px;
+  }
+  50% {
+    filter: blur(10px);
+    border-radius: 50px;
+  }
+  100% {
+    filter: blur(0px);
+    border-radius: 5px;
+  }
+}
+@keyframes fourthAnim {
+  0% {
+    border-color: white;
+    color: white;
+  }
+  20% {
+    border-color: red;
+    color: red;
+  }
+  40% {
+    border-color: blue;
+    color: blue;
+  }
+  60% {
+    border-color: green;
+    color: green;
+  }
+  80% {
+    border-color: peru;
+    color: peru;
+  }
+  100% {
+    border-color: white;
+    color: white;
+  }
+}
+@keyframes fithAnim {
+  0% {
+    transform: rotateX(0deg);
+  }
+  100% {
+    transform: rotateX(360deg);
+  }
+}
 @media (max-width: 1380px) {
   body {
     width: 100vw;
@@ -227,6 +399,7 @@ body footer .copyright {
     text-align: center;
     margin-top: 0px;
     width: 100vw;
+    z-index: 2;
   }
   body header .title-div {
     display: flex;
@@ -309,6 +482,50 @@ body footer .copyright {
   body footer {
     margin-top: 50px;
     padding-top: 20px;
+  }
+}
+@media (max-width: 900px) {
+  body .main-blog .blog-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  body .main-contact form {
+    width: 55vw;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+  body .main-contact form label {
+    text-align: left;
+    margin-right: 15px;
+  }
+  body .main-contact form input, body .main-contact form textarea {
+    width: 300px;
+    min-width: 300px;
+    max-width: 300px;
+    transition: 0.5s;
+    margin: auto;
+  }
+  body .main-contact form button {
+    width: 100px;
+    margin: 15px auto;
+    margin-left: 105px;
+    padding: 6px 12px;
+    background-color: var(--one-blue);
+    border: none;
+    border-radius: 5px;
+    transition: 0.5s;
+  }
+  body .main-contact form input:hover, body .main-contact form textarea:hover {
+    transform: translateY(3px);
+  }
+  body .main-contact form button:hover {
+    transform: translateY(5px);
+    background-color: rgba(82, 147, 226, 0.648);
+  }
+  body .main-pres section {
+    flex-direction: column;
+    margin-top: 35px;
+    z-index: -1;
   }
 }
 

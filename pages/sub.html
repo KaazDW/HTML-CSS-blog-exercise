@@ -31,13 +31,13 @@
         </ul>
     </header>
     <main class="main-contact">
-        <h2>Contact</h2>
+        <h2>Abonnez-vous</h2>
         <form>
-            <label for="subject">Sujet du message</label>
-            <input id="subject" name="subject">
-
             <label for="email">Adresse E-mail</label>
             <input type="email" id="email" name="email">
+
+            <label for="password">Mot de Passe</label>
+            <input id="password" type="password" name="password">
 
             <label for="name">Nom</label>
             <input id="name" name="name">
@@ -45,8 +45,46 @@
             <label for="surname">Prénom</label>
             <input id="surname" name="surname">
 
-            <label for="msg">Votre message</label>
-            <textarea id="msg" name="msg"></textarea>
+            <label for="birth">Date de Naissance</label>
+            <input type="date" id="birth" name="birth">
+
+            <label for="adr">Adresse Postal</label>
+            <input id="adr" name="adr">
+            <p id="validatormsg"></p>
+
+            <label for="cpostal">Code Postal</label>
+            <input maxlength="5" minlength="5" id="cpostal" name="cpostal">
+
+            <label for="ville">Ville</label>
+            <input id="ville" name="ville">
+
+            <label for="sexe">Sexe</label>
+            <select name="sexe" id="sexe">
+                <option value="">-Choisissez une option-</option>
+                <option value="homme">Homme</option>
+                <option value="femme">Femme</option>
+                <option value="helico">Hélicoptère</option>
+            </select>
+
+            <label for="photo">Photo</label>
+            <input type="file" accept=".png,.jpg,.gif,.webp" id="photo" name="photo">
+
+            <label for="loisir">Loisirs (CTRL + CLIC pour selection multiple)</label>
+            <select id ="loisir" name="loisir" multiple size="4">
+                <optgroup label="Sports">
+                  <option value="foot">Football</option>
+                  <option value="basket">Basketball</option>
+                  <option value="baseball" disabled>Baseball</option>
+                </optgroup>
+                <optgroup label="Musique">
+                    <option value="guitare">Guitare</option>
+                    <option value="batterie">Batterie</option>
+                    <option value="violon" disabled>Violon</option>
+                </optgroup>
+            </select>
+
+            <label for="cpref">Couleur préféré</label>
+            <input type="color" id="cpref" name="cpref">
 
             <button type="submit">Envoyé</button>
         </form>
