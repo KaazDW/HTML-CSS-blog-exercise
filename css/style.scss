@@ -271,27 +271,28 @@ body{
             a{
                 margin: 15px;
                 padding: 8px 12px;
+                text-align: center;
             }
         }
         .wave{
-            a:nth-child(1){
-                background-color: var(--one-blue);
-                border-radius: 5px;
-                animation: firstAnim 3s infinite;
-            }
             a:nth-child(2){
                 background-color: var(--one-blue);
                 border-radius: 5px;
                 animation: firstAnim 3s infinite;
-                animation-delay: .5s;
             }
             a:nth-child(3){
                 background-color: var(--one-blue);
                 border-radius: 5px;
                 animation: firstAnim 3s infinite;
-                animation-delay: 1s;
+                animation-delay: .5s;
             }
             a:nth-child(4){
+                background-color: var(--one-blue);
+                border-radius: 5px;
+                animation: firstAnim 3s infinite;
+                animation-delay: 1s;
+            }
+            a:nth-child(5){
                 background-color: var(--one-blue);
                 border-radius: 5px;
                 animation: firstAnim 3s infinite;
@@ -301,12 +302,12 @@ body{
         .other{
             border-top: 3px dashed grey;
             padding-top: 55px;
-            a:nth-child(1){
+            a:nth-child(2){
                 background-color: lightcoral;
                 border-radius: 50px;
                 animation: secondAnim 3s infinite;
             }
-            a:nth-child(2){
+            a:nth-child(3){
                 background-color: lightgreen;
                 border-radius: 5px;
                 animation: thirdAnim 3s infinite;
@@ -314,14 +315,14 @@ body{
                 color: black;
                 font-weight: 600;
             }
-            a:nth-child(3){
+            a:nth-child(4){
                 background-color: var(--one-blue);
                 border-radius: 5px;
                 animation: fourthAnim 3s infinite;
                 border: 5px solid white;
                 animation-delay: 1s;
             }
-            a:nth-child(4){
+            a:nth-child(5){
                 background-color: var(--one-blue);
                 border-radius: 5px;
                 animation: fithAnim 3s infinite;
