@@ -1,4 +1,6 @@
 console.log(">> JS FILE LOAD");
+
+// RESPONSIVE HAMBURGER MENU
 var nav = document.getElementById("nav");
 act = false;
 
@@ -17,57 +19,56 @@ function mobilemenu() {
 }
 
 
-var headtitle = document.getElementById("title");
-headtitle.innerHTML = "Hello";
+// TP 4 EXO 1
 
-setTimeout(() => {
-    headtitle.innerHTML = "Hello";
-}, "1000")
-
-
-for(let i=10; i<0; i--){
-    headtitle.innerHTML = "Good Bye";
-    setTimeout(() => {
-        headtitle.innerHTML = "Hello";
-    }, "1000");
-}
-
-
-/*
-function ContactValidation() {
-
-    var validRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
-    var input = document.getElementById="email";
-    var msg = document.getElementById="validatormsg";
-
-    if (input.value.match(validRegex)) {
-        msg.innerHTML = "Email Validé";
-    } else {
-        msg.innerHTML = "Email Erroné";
-    }
-}
-ContactValidation();*/
+document.getElementById('msg').style.display = 'none';
+document.getElementById('msg-label').style.display = 'none';
 
 document.getElementById('email').addEventListener('change', event => {
-    if (event.target.value = '') {
-        document.getElementById('msg').style.display = 'none';
-    } else {
-        document.getElementById('msg').style.display = 'flex';
+    if (event.target.value != '') {
+        document.getElementById('msg').style.display = 'block';
+        document.getElementById('msg-label').style.display = 'block';
     }
 })
 
-document.getElementById('contact-form').addEventListener('change', event => {
+
+
+
+// TP 4 EXO 2
+
+var contactbutton = document.getElementById('submit-button-contact');
+contactbutton.setAttribute('disabled', 'true');
+contactbutton.style.background = "black";
+contactbutton.style.color = "grey";
+contactbutton.style.border = "1px solid grey";
+
+document.getElementById('form-contact').addEventListener('change', event => {
     if (
-        document.getElementById('sujet-input').value != ''
-        && document.getElementById('email-input').value != ''
-        && document.getElementById('prenom-input').value != ''
-        && document.getElementById('nom-input').value != ''
-        && document.getElementById('message-textarea').value != ''
+        document.getElementById('subject').value != ''
+        && document.getElementById('email').value != ''
+        && document.getElementById('name').value != ''
+        && document.getElementById('surname').value != ''
+        && document.getElementById('msg').value != ''
     ) {
-        document.getElementById('form-button').removeAttribute('disabled')
-    } else {
-        document.getElementById('form-button').setAttribute('disabled', 'true')
+        document.getElementById('submit-button-contact').removeAttribute('disabled')
+        contactbutton.style.background = "lightblue";
+        contactbutton.style.color = "black";
+        contactbutton.style.border = "1px solid white";
     }
 })
 
 
+
+// TP 4 EXO 3
+
+var contactbutton = document.getElementById('submit-button-contact');
+var obli = document.getElementById('obligatoire');
+document.getElementById('subject').value != '';
+
+
+function subsubmit(){
+    if(document.getElementById('email-sub').value === ''){
+        obli.innerHTML = 'champs obligatoire';
+    }
+
+}
