@@ -222,7 +222,13 @@ body .main-contact form input, body .main-contact form textarea, body .main-cont
 body .main-contact form text-area {
   width: 150vw;
 }
-body .main-contact form button {
+body .main-contact form p {
+  color: white;
+  text-align: center;
+  background-color: rgb(189, 57, 57);
+}
+body .main-contact form .button {
+  text-align: center;
   grid-column: 2/2;
   width: 100px;
   margin: 15px auto;
@@ -231,9 +237,25 @@ body .main-contact form button {
   border: none;
   border-radius: 5px;
   transition: 0.5s;
+  user-select: none;
 }
 body .main-contact form input:hover, body .main-contact form textarea:hover, body .main-contact form select:hover {
   transform: translateY(3px);
+}
+body .main-contact form .button:hover {
+  transform: translateY(5px);
+  background-color: rgba(82, 147, 226, 0.648);
+}
+body .main-contact form button {
+  text-align: center;
+  grid-column: 2/2;
+  width: 100px;
+  margin: 15px auto;
+  padding: 6px 12px;
+  background-color: var(--one-blue);
+  border: none;
+  border-radius: 5px;
+  transition: 0.5s;
 }
 body .main-contact form button:hover {
   transform: translateY(5px);

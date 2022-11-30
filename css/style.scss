@@ -1,6 +1,12 @@
+// ------------------------------------
+//     MARCOURT Jean-François 
+//     S3G3.2 - 2022-2023
+//     obj = Rendu TP d'HTML CSS & JS
+// ------------------------------------ 
+
+
 //google font initialisation
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;600;700&family=Poppins:wght@100;300;400;500;600;700;800;900&display=swap');
-
 
 *{
     padding: 0;
@@ -11,8 +17,6 @@
         text-decoration: none;
     }
 }
-
-
 :root{
     //color definition variable
     --one-blue: rgb(82,148,226);
@@ -23,8 +27,6 @@
 
 
 }
-
-
 body{
     background-color: #000;
     font-family: 'Poppins';
@@ -244,7 +246,13 @@ body{
                 width: 150vw;
 
             }
-            button{
+            p{
+                color: white;
+                text-align: center;
+                background-color: rgb(189, 57, 57);
+            }
+            .button{
+                text-align: center;
                 grid-column: 2 / 2;
                 width: 100px;
                 margin: 15px auto;
@@ -253,10 +261,26 @@ body{
                 border: none;
                 border-radius: 5px;
                 transition: .5s;
+                user-select: none;
             }
             input:hover, textarea:hover, select:hover{
                 transform: translateY(3px);
             }
+            .button:hover{
+                transform: translateY(5px);
+                background-color: rgba(82, 147, 226, 0.648);
+            }
+            button{
+                text-align: center;
+                grid-column: 2 / 2;
+                width: 100px;
+                margin: 15px auto;
+                padding: 6px 12px;
+                background-color: var(--one-blue);
+                border: none;
+                border-radius: 5px;
+                transition: .5s;
+            } 
             button:hover{
                 transform: translateY(5px);
                 background-color: rgba(82, 147, 226, 0.648);
